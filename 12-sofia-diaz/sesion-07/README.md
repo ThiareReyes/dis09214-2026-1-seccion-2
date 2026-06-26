@@ -1,4 +1,4 @@
-# sesión 07 - 15/05  
+# sesión 06 - 15/05  
 **LOOPS : WHILE Y FORD**  
 
 

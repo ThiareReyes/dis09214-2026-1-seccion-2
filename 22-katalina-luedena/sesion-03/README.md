@@ -1,127 +1,150 @@
 # sesión 03 - 27/03
-# clase-makdown
-Es una plataforma en la nube que permite almacenar, gestionar y compartir código fuente utilizando el sistema de control de versiones Gift. Funciona como una “red social“ para programadores, facilitando la colaboración, el seguimiento de cambios y el desarrollo de proyectos de software, tanto públicos como privado.
+## Hola P5.js    
+
+#### Algoritmo  
+Es una secuencia instrucciones paso a paso,lógicas, definidas, ordenadas y finitas que permiten solucionar un problema o realizar una tarea específica.  
+
+#### Características fundamentales  
+*  Presición.
+*  Orden.
+*  Finitud.
+*  definición.
+
+## Estructura  
+*  Input (Entrada): La información o los ingredientes que necesites para emepzar.
+*  proceso: Los pasos lógicos que transforman esa entrada.
+*  Output (Salida): El resultado final o la solucion al problema.
+
+#### Ejemplo  
+1.  Ingresientes y utensilios necesarios para hacer un sandwich (INPUT).
+2.  Lista de instrucciones para hacer un sandwich (ALGORITMO).
+3.  Sandwich terminado (OUTPUT).
+
+## DIAGRAMA DE FLUJO  
+*  Representación gráfica de un algoritmo  de los pasos de un proceso. En programación, se utiliza como una herramienta de planificación para visualizar la lógica de un proghrama.
+
+*  Se usan componentes Estándar (Simbología), para que cualquier programador pueda entenderlo.
+
+## Lenguajes de programación  
+#### ¿Cuántos lenguajes de programación existen?  
+Existen entre 700 y 900 lenguajes de programación.   
+
+Si incluimos lenguajes antiguos (muchos ya en desuso), dialectos específicos y lenguajes creados para investigación, la cifra supera los 8,000 o incluso 9,000.  
+
+## P5.js  
+#### Lenguaje de programación  
+Utiliza principalmente el lenguaje __JavaScript__.  
+
+#### Librería Javascript  
+p5.js no es un lenguaje nuevo desde cero, sino una biblioteca (library) de JavaScript. Esto significa que usa toda la potencia y la sintaxis de JavaScript, pero te regala un "vocabulario" especializado para crear cosas visuales de forma mucho más sencilla. 
+
+## Funciones maestras  
+#### Setup(){ 
+Se ejecuta una sola vez al principio (para crear el lienzo). Su propósito es configurar el entorno inicial. Lo que sucede es que se define el tamaño del lienzo (createCanvas), cargas imágenes o sonidos, y estableces configuraciones que no cambiarán (como el clor de fondo inicial).}  
+
+#### Draw(){  
+Se ejecuta en un bucle infinito (normalmente 60 veces por segundo), lo que permite crear animaciones. Crea movimiento y responder a la interacción en tiempo real. Aquí dibujas formas que cambian de posición, detectas dónde está el ratón o cambias colores gradualmente.}  
+
+## Create canvas  
+#### Sintaxis  
+createCanvas([widt],[height],[render],[canvas];  
+#### Ejemplo
+createCanvas(100,100);  
+
+#### crateCanvas (width,height)  
+Nos sirve para crear el lienzo (canvas) y determinar su tamaño en pixeles, solo se pone __una vez y siempre dentro del setup()__.  
+#### renderer
+Define el motor de renderizado. 
+#### canvas
+Este es el parámetro "oculto" y menos utilizado, pero súper útil si eres desarrollador web.  
+
+## Background  
+#### Sintaxis 
+background(v1, v2, v3, [a]);   
+#### Ejemplo
+background(250, 150, 228,150);  
+#### background(v1,v2,v3,[a]);
+Nos sirve para designar el color de nuestro lienzo (canvas). Se puede poner en setup(); o en el draw(), pero tienes resultados diferentes.    
+#### [v1,v2,v3]  
+Son los valores de R,G,B.   
+#### [a]  
+Este es el parámetro para el canal alpha, nos sirve para darle semitransparencia al color del fondo. (0-255) Donde 1 será MUY transparente y 255 MUY poco transparente.
+*Se puede usar sin este parámetro.  
+
+## Dibujar en p5.js  
+Para dibujar en p5 tenemos que entender que el canvas funciona con un sistema de coordenadas (x,y) como un plano cartesiano, pero hay que tener en cuenta que el punto (0,0) no está en el centro, sino en la esquina superior izquierda.  
+
+## Figuras geométricas 2D  
+*  point(x, y); Dibuja un solo píxel en las coordenadas dadas.
+*  line(x1, y1, x2, y2); Dibuja una línea desde un punto inicial hasta un punto final.
+*  rect(x, y, ancho, alto); Dibuja un rectángulo. Por defecto, x e y definen la esquina superior izquierda.
+*  ellipse(x, y, ancho, alto); Dibuja un óvalo o círculo. A diferencia del rectángulo, x e y definen el centro de la figura.
+*  circle(x, y, diámetro); Una versión simplificada de la elipse cuando quieres un círculo perfecto.
+*  square(x, y, lado); Un rectángulo donde todos los lados son iguales.
+*  triangle(x1, y1, x2, y2, x3, y3); Necesitas darle las coordenadas de sus tres esquinas.
+*  quad(x1, y1, x2, y2, x3, y3, x4, y4); Un cuadrilátero. Sirve para hacer formas irregulares de cuatro lados.
+
+## Tamaño del borde  
+#### Sintaxsis  
+strokeWeight(weight);
+#### Ejemplo  
+strokeWeight(25);  
+#### strokeWeight();  
+Establece el tamaño deñ borde de las figuras o el ancho de la linea o punto. Siempre se pone arriba del stroke();.  
+#### noStroke();  
+Se usa para que mi figura no tenga borde.   
+
+## Color del borde   
+#### Sintaxis 
+stroke(v1,v2,v3,[alpha]);  
+#### Ejemplo  
+stroke(245,0,0);  
+#### stroke();  
+Establece el color que se utiliza para dibujar puntos, lineas y contornos de figuras. Se pone arriba de la lina de código de la figura.  
+
+## Forma del borde/linea  
+#### Sintaxis  
+strokeCap(cap);   
+#### Ejemplo  
+strokeCap(SAQUARE);  
+#### strokeCap(); 
+Define la forma de la linea o borde de nuestras figuras.  
+
+Las constantes son:  
+*  ROUND
+*  SQUARE
+*  PROJECT
+Por defecto siempre es ROUND
+
+## Relleno de color  
+#### Sintaxis 
+fill(v1,v2,v3,[alpha];  
+#### Ejemplo  
+fill(252,159,216);  
+#### fill();  
+Establece el COLOR de relleno para las figuras. Se pone arriba de la figura que quiero colorear.  
+
+## Figuras geométricas 2D avanzadas  
+#### sintaxis  
+arc(x,y,w,h,start,stop)  
+#### Ejemplo  
+arc(250,250,100,100,270,90)  
+#### arc();   
+Nos sirve para hacer arcos o medio círculo. X e y son las coordenadas del centro del círculo que contiene este arco, w y h son la anchura y alto del círculo que contiene este arco, star y stop, es donde comienza y termina el ángulo de este arco.  
+
+Se sugiere activar el modo ángulos en el SETUP(); para que sea más fácil: angleMode(DEGREES);. 
+
+En p5.js (y en la mayoría de los lenguajes de programación), el grado 0 no está arriba, sino a la derecha (en el eje X positivo). Y se mueve en el sentido del reloj.
+*  0° / 0 rad: A las 3 en punto (derecha).
+*  90° / HALF_PI: A las 6 en punto (abajo).
+*  180° / PI: A las 9 en punto (izquierda).
+*  270° / (PI + HALF_PI): A las 12 en punto (arriba).
 
 
-MARKDOWN- Es un lenguaje de marcado ligero. En términos simples, es una forma de escribir texto con formato.  
 
-SALTOS DE LINEA- párrafo nuevo enter dos veces.  
 
-BAJAR UNA LINEA- dos espacios al final más enter.  
 
-FORZAR SALTO- <BR  
-ENCABEZADOS-  
-#título nivel 1  
-##nivel 2  
-###nivel 3, y así.  
-#Formato de texto:
 
-# Breve hisitoria de la computación  
-## Maquina diferencial/ Charles Babbage, 1822.  
-### "La primera computadora del mundo"  
-Babbage diseñó esta máquina para sistematizar el cálculo de la tabulación de funciones polinómicas, tareas que hasta entonces se realizaban manualmente y eran propensas al error. Era un gran dispositivo mecánico de gran escala, compuesto íntegramente por engranajes que servía para resolver ecuaciones e imprimir los resultados en forma de tablas matemáticas.
-
-## Máquina diferencial II/ Museo de las ciencias de Londres, 1991.  
-### The difference Engine.  
-El Museo de ciencias de Londres construyó la Difference Engine No.2 siguiendo exactamente los planos originales de Babbage. Funcionó perfectamente, demostrando que su diseño era correcto y que se pudo haber construido en la época victoriana si la gestión hubiera sido diferente.
-
-## Máquina analitica/ Charles Babbage, 1834-1837.  
-La máquina analitica fué diseñada para realizar cualquier tipo de cálculo establecido anteriormente y para tener una capacidad de análisis aún mayor que la Máquina diferecial original. Se concidera la primera Máquina de cálculo completamente automática.
-
-## Telar de Jacquard/ Joseph Marie Jacquard, 1801.  
- - Primer sistema de almacenamiento de información binaria.
- - El telar usaba un sistema de tarjetas perforadoras para lograr diseños complejos y automatizados.
- - Si había agujero: La varilla pasaba, el gancho se activaba y levantaba el hilo (podemos llamarlo un 1 o "encendido").
- - Si no había agujero: La varilla chocaba contra la tarjeta, el gancho no se movía y el hilo se quedaba abajo (podemos llamarlo un 0 o "apagado").
-
-## Tres conceptos fundamentales de la computación moderna:  
-1. ### La separación entre hadware y software
-   **Hadware**: El telar en sí (la máquina física, los granajes, los hilos).
-   **Software**: Las tarjetas perforadas.
-
-   Antes de Jacquard, si queríamos que una máquina hiciera algo diferente, teníamos que reconstruirla o cambiar sus piezas. Con Jacquard la máquina no cambia; solo cambias las tarjetas (el programa) y obtienes un rsultado totalmente distinto.
-
-3. ### El sistema binario
-   Aunque Jacquard no pensaba en matemáticas, creó un sistema de lógica binaria. La aunsencia o presencia de materia (agujero o cartón) determinaba una acción.
-
-4. ### El píxel y la imagen rasterizada
-      Podemos entender el tejido como una forma primigenia de imagen de mapa de bits: la tela constituye la rejilla (grid) de soporte, donde cada intersección entre trama y urdimbre funciona como un píxel individual. La tarjeta perforada opera como el archivo digital (el .jpg), enviando instrucciones precisas sobre qué puntos activar para componer la imagen visual.
-
-## Ada Lovelace  
-### "La primera programadora"  
-Ada Lovelace fué una matemática y escritora del siglo XIX, considerada la primera programadora de la historia, trabajó junto a Charles Babbage en el desarrolo de la máquina analítica. Aunque Babbage pensaba que la máquina era solo para cálculos numéricos, Ada antendió que podía procesar cualquier tipo de información (como música o arte).  
-Inspirada en el telar de Jacquard, vio que las tarjetas perforadas podían usarse para crear instrucciones o programas, por esto, se le conoce por anticipar el concepto de programación mucho antes de que existieran los computadores.
-
-### El primer algoritmo  
-Entre 1842 y 1843, Lovelace tradujo al inglés y revisó un artículo del ingeniero italiano Luigui Menabrea sobre la máquina analítica de Babbage. En sus anotaciones, Lovelace incluyó un conjunto de algoritmos diseñado específicamente para su implementación en un "computador", para que la máquina calculara una serie de números de bernoulli. Estos algoritmos se consideran actualmente como el primer programa de computación, lo que convierte a Lovelace en la primera programadora de la historia.
-
-## La máquina de Turing  
-Originalmente fue definida por el matemático inglés Alan Turing como la "máquina automática" en 1936 en la revista Proceedings of the London Mathematical Society.  
-
-No es una máquina física es un **experimento mental** (una máquina teórica). Turing imaginó una cinta infinita, un cabezal que lee/escribe símbolos, y un cpnjunto de reglas, (estados).  
-
-Define la **Computabilidad Universal**. Turing demostró que una máquina simple, con las instrucciones correctas, puede simular a cualquier otra máquina.  
-
-El hadware se vualve irrelevante; lo que importa es **el código (las instrucciones)**.
-
-# El despertar visual  
-## Artistas y algoritmos  
-La mayoría de los esfuerzos por usar la computadora para crear arte comenzaron en la década de 1960, en medio de una escena artística efervescente y diversa. Artistas como **Vera Molnár**, **Manfred Mohr**, **Georg Nees**, entre otros.
-
-# John & James Whitney  
-Fueron pioneros en el trabajo con Computer Graphics Animation.  
-
-Whitney no usó una computadora digital al principio. Recuperó un **compuatdor análogo de la Segunda Guerra Mundial** (un director de tiro antiaéreo M-5) y lo que modificó. En lugar de calcular trayectorias para derribar aviones, convirtió los voltajes en movimientos de cámara y luz para pintar sobre celuloide.  
-
-Introducen el concepto de Diseño Paramétrico y Movimiento Armónico.
-
-# Sketchpad Ivan Sutherland  
-En 1963, Sutherland creó el primer programa informático que permitía dibujar directamente en una pantalla usuando un lápiz óptico.  
-
-Este sistema introdujo la manipulación directa de objetos gráficos, pionero en la interacción humano-computador (HCI), sentando las bases de los programas de diseño asistido por computador.  
-
-Introdce la Programación Orientada a Objetos (POO) de forma visual: podía dibujar una "rueda maestra" y luego crear 50 copias; si cambiaba la maestra, cambiaban todas.
-
-# Democratización del Creative Coding  
-## Software libre  
-Nace formalmente en 1983, cuando Richard Stallman anunció el inicio del Proyecto GNU.  
-
-La idea del proyecto era crear un sistema operativo libre.  
-
-En 1985 se publica el Manifesto GNU y se funda la **Free Software Fundation (FSF)**.  
-
-Este movimiento surgió como respuesta a la creciente privatización del software.  
-
-#### Buscan garantizar 4 libertades esenciales:  
-1. **Libertad 0 (uso):** La libertad de ejecutar el programa como se desee, con cualquier propósito.
-2. **Libertad 1 (estudio):** La libertad de esrudiar cómo funciona  el programa y cambiarlo para que haga lo que el usuario quiera. El acceso al código fuente es una condición necesaria.
-3. **Libertad 2 (distribución):** La libertad de redistribuir copias para ayudar a otros.
-4. **Libertad 3 (mejira):** La libertad de mejorar el programa y hacer públicas las mejoras, para que toda la comunidad se beneficie. El acceso a código fuente es necesario.
-
-#### Principios fundamentales adicionales de la FSF:  
-1. **Libertad, no precio:** El software libre es una cuestión de libertad de los usuarios de computadores, no de precio.
-2. **Copyleft:** Se promueve la distribución bajo términos de copyleft, que garantizan que el software y sus versiones modificadas sigan siendo libres.
-3. **Lucha contra restricciones:** Campañas activas contra patentes de software, Gesatión Digital de Restricciones (DRM) y otras amenazas a la libertad de los usuarios.
-4. **Desarrollo del proyecto GNU:** Fomento del desarrollo de un sistema operativo completamente libre.
-
-## Desing by numbers, John Maeda  
-Experimento educativo radical, lanzado en 1999 por John Maeda en el MIT Media Lab.  
-Consistía en un lenguaje de prgramación y entorno diseñado específicamente para enseñar a diseñadores visuales a programar.  
-
-- Todo el espacio de tranajo es una cuadrícula fija de 100x100 píxeles.
-- No había colores RGB complejos. Solo existía el "porcentaje de tinta".0 era blanco (papel vacío) y 100 era negro total.
-- Maeda eliminó los puntos y comas, las llaves complejas y las declaraciones de tipos variables. El código se leía fácilmente: line 10 10 90 90 (dibuja una línea de x10, y10 a x90,y90).
-
-## Procesing, Casey reas y Ben Fry  
-Software libre, de código abierto y gratuito, diseñado para la enseñanza de prgramación en contextos visuales, permite a artistas, diseñadores y principiantes crear gráficos, animaciones e intereacciones, estando disponible paea Windows, macOS, Linux.  
-
-Creado en el MIT Medialab por 2 estudiantes de John Maeda; Ben Fry y Casey Reas, en el año 2001.  
-
-Quisieron expandir las limitaciones del Desing by Numbers (DBN).  
-
-Agregaron la paleta de color y tamaño variable.  
-
-Mantuvieron la simplicidad en la sistaxis en el código y la idea del #sketchbook".
 
 
 
